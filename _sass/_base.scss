@@ -39,8 +39,8 @@ p {
 .sidebar-wrapper {
     background: $theme-color;
     position: absolute;
-    /*right: 0;*/ 
-    direction: rtl;
+    right: 0; 
+    /*direction: rtl;*/
     width: 280px;
     height: 100%;
     min-height: 800px;
@@ -51,6 +51,7 @@ p {
     .profile-container {
         padding: 30px;
         //background: darken($theme-color, 10%);
+        direction: rtl;
         background: rgba(0, 0, 0, 0.2);
         text-align: center;
         color: #fff;
