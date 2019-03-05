@@ -26,7 +26,6 @@ a {
 
 p {
     line-height: 1.5;
-    direction: ltr;
 }
 
 .wrapper {
@@ -41,7 +40,7 @@ p {
     background: $theme-color;
     position: absolute;
     right: 0; 
-    /*direction: rtl;*/
+    direction: ltr;
     width: 280px;
     height: 100%;
     min-height: 800px;
@@ -52,7 +51,6 @@ p {
     .profile-container {
         padding: 30px;
         //background: darken($theme-color, 10%);
-        direction: ltr;
         background: rgba(0, 0, 0, 0.2);
         text-align: center;
         color: #fff;
