@@ -41,19 +41,18 @@ sidebar:
       - item: Drawing
         link:
 
-      - item: 
+      - item: Films&Movies(writing scenarios,directoring,special effects)
         link:
 
 career-profile:
     title: Career Profile
-    summary: |
-      Summarise your career here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
-
-      Second paragraph if required.
+    summary: Hello! I'm currently an undergraduate univercity student at the department of Informatics
+      at the Ionian University. Right now, I'm at my thtird year of my studies and I have experianced some projects,
+      situations and lessons. At our acaademic lessons we have seen some basic knowledges like Data Base and programming
+      with basic languages like C. I have also participated in some projects, one of them is a competition of the Udacity
+      University where I had to learn XML and build a phone app. Another project, was with the schools IEEE branch, a free
+      project where everybody could do what they wanted ,the title of this was 'Local Hacathon Day' where I was part of a 
+      group and we built the Matrix code. So far, that it! If you want to learn more about me scroll down! :) 
 
 education:
     - degree: High School Graduate
@@ -78,12 +77,17 @@ experiences:
     - role: Assistant 
       time: 2018/2 - 2018/4
       company: E-evros, Alexandroupoli, Evros
-      details: Help assistant at Photoshop, taking videos , making articles ec.
+      details: Help assistant at Photoshop, taking videos , making articles etc.
 
-    - role: 
-      time: 
-      company: 
-      details: 
+    - role: Participant
+      time: 2017 - 2018 
+      company: Udacity University
+      details: Part of a competition to build a phone app using XML.
+      
+      - role: Participant
+      time: 2018 
+      company: IEEE of Ionian University
+      details: Participated in the free project 'Local Hacathon Day', where in our group we created the Matrix code.
 
 projects:
     title: Projects
@@ -98,15 +102,6 @@ projects:
         link: "#"
         tagline: "A school project, which was meant to teach us the UI with the computers and the users."
 
-publications:
-    title: Publications
-    intro: 
-
-    papers:
-      - title: 
-        authors: 
-        conference: 
-
 skills:
     title: Skills &amp; Proficiency
 
@@ -115,10 +110,16 @@ skills:
         level: 70%
 
       - name: HTML5 & CSS
-        level: 70%
-
-      - name: Sketch & Photoshop
         level: 60%
+        
+      - name: XML,C,Python,C++
+        level: 40%
+        
+      - name: Photoshop & Video editing
+        level: 60%
+        
+       - name: Graphics & Film-Animation Editing
+        level: 0%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by Myrto. Based on online-cv by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
