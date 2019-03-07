@@ -52,7 +52,7 @@ career-profile:
       with basic languages like C. I have also participated in some projects, one of them is a competition of the Udacity
       University where I had to learn XML and build a phone app. Another project, was with the schools IEEE branch, a free
       project where everybody could do what they wanted ,the title of this was 'Local Hacathon Day' where I was part of a 
-      group and we built the Matrix code. So far, that it! If you want to learn more about me scroll down! :) 
+      group and we built the Matrix code. So far, that it! If you want to learn more about me scroll down! 
 
 education:
     - degree: High School Graduate
@@ -84,7 +84,7 @@ experiences:
       company: Udacity University
       details: Part of a competition to build a phone app using XML.
       
-      - role: Participant
+    - role: Participant
       time: 2018 
       company: IEEE of Ionian University
       details: Participated in the free project 'Local Hacathon Day', where in our group we created the Matrix code.
