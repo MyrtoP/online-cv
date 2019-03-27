@@ -1,0 +1,17 @@
+# Set the language
+language: bash
+
+before_install:
+# Fetch pandoc and pandoc-citeproc binaries
+    - wget https://github.com/jgm/pandoc/releases/download/2.1.1/pandoc-2.1.1-1-amd64.deb && ar p pandoc-2.1.1-1-amd64.deb data.tar.xz | tar xJ
+# Install TeX Live
+    - sudo apt-get update -qq
+    - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
+    #- tar xvfz pandoc-2.6-linux.tar.gz
+  
+script:
+#create the pdf 
+    - pandoc data.yml -o cv.pdf --template=template.tex --pdf-engine=xelatex 
+
+after_success:
+    - bash push.sh
