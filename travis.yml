@@ -12,6 +12,7 @@ before_install:
 script:
 #create the pdf 
     - pandoc data.yml -o cv.pdf --template=template.tex --pdf-engine=xelatex 
+    - gem install bundler
 
 after_success:
     - bash push.sh
