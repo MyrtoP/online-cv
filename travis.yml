@@ -7,12 +7,12 @@ before_install:
 # Install TeX Live
     - sudo apt-get update -qq
     - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
-    #- tar xvfz pandoc-2.6-linux.tar.gz
+    - tar xvfz pandoc-2.6-linux.tar.gz
   
 script:
 #create the pdf 
     - pandoc data.yml -o cv.pdf --template=template.tex --pdf-engine=xelatex 
-    - gem install bundler
+    #- gem install bundler
 
 after_success:
     - bash push.sh
