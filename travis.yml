@@ -3,6 +3,7 @@ language:  bash
 
 before_install:
 # Fetch pandoc and pandoc-citeproc binaries
+ - gem install bundler
 - sudo apt-get install texlive texlive-xetex texlive-math-extra texlive-latex-recommended texlive-latex-extra
 - wget https://github.com/jgm/pandoc/releases/download/2.6/pandoc-2.6-linux.tar.gz
 # Install TeX Live
@@ -13,7 +14,7 @@ before_install:
 script:
 #create the pdf 
     - pandoc data.yml -o cv.pdf --template=template.tex --pdf-engine=xelatex 
-   # - gem install bundler
+   
 
 after_success:
     - bash push.sh
