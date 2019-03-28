@@ -10,9 +10,11 @@ commit_pdf() {
 }
 
 upload_files() {
-  git remote remove origin
-  git remote add origin https://MyrtoP:$GITHUB_TOKEN@github.com/MyrtoP/online-cv.git
+  #git remote remove origin
+  #git remote add origin https://MyrtoP:$GITHUB_TOKEN@github.com/MyrtoP/online-cv.git
   git push --quiet -u origin master
+  git remote add origin-pages https://${GH_TOKEN}@github.com/MVSE-outreach/resources.git > /dev/null 2>&1
+  git push --quiet --set-upstream origin-pages gh-pages 
 }
 
 setup_git
