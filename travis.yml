@@ -1,27 +1,12 @@
-# Set the language
-language:  generic
-deploy:
-  provider: s3
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key: "$AWS_SECRET_KEY"
-  bucket: "$BUCKET"
-  region: "$REGION"
-  acl: public_read
-  skip_cleanup: true
-
+# Ruby is our language as asciidoctor is a ruby gem.
+lang: ruby
 before_install:
-# Fetch pandoc and pandoc-citeproc binaries
-- sudo apt-get install texlive texlive-xetex texlive-math-extra texlive-latex-recommended texlive-latex-extra
-- wget https://github.com/jgm/pandoc/releases/download/2.6/pandoc-2.6-linux.tar.gz
-# Install TeX Live
-    - sudo apt-get update -qq
-    - sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra  texlive-science
-    - tar xvfz pandoc-2.6-linux.tar.gz
-  
+  - sudo apt-get install pandoc
+  - gem install asciidoctor
 script:
-#create the pdf 
-    - pandoc data.yml -o cv.pdf --template=template.tex --pdf-engine=xelatex 
-   
-
+  - make
 after_success:
-    - bash push.sh
+  - .travis/push.sh
+env:
+  global:
+    secure: hZJlqgOzA2zIUJSWIka0PylqNaTkfHq+kS48RrHmocrK0vLyCW7ECWrzez2f2RVdTNzPi0b+yJq2uCbFfWjImZqg+XY1I75/CVVdSYMk7PJkYZ/iBDixMYY8CAkRRd5yZft9uZAdZzR4KLCPN18n7qfISv/M9VA8989NKcVyiEU=
