@@ -4,14 +4,14 @@ setup_git() {
 }
 
 commit_website_files() {
-  git checkout master
+  git checkout gh-pages
   git add _data *.pdf
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
   git remote add origin-pages https://$GITHUB_TOKEN@github.com/MyrtoP/online-cv.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages master 
+  git push --quiet --set-upstream origin-pages gh-pages 
 }
 
 setup_git
