@@ -1,12 +1,23 @@
 # Ruby is our language as asciidoctor is a ruby gem.
-lang: ruby
-before_install:
-  - sudo apt-get install pandoc
-  - gem install asciidoctor
-script:
-  - make
-after_success:
-  - .travis/push.sh
+language: bash
 env:
   global:
-    secure: hZJlqgOzA2zIUJSWIka0PylqNaTkfHq+kS48RrHmocrK0vLyCW7ECWrzez2f2RVdTNzPi0b+yJq2uCbFfWjImZqg+XY1I75/CVVdSYMk7PJkYZ/iBDixMYY8CAkRRd5yZft9uZAdZzR4KLCPN18n7qfISv/M9VA8989NKcVyiEU=
+  - PATH=$TRAVIS_BUILD_DIR/usr/bin/:$PATH
+  - secure: gpv5H8oqd3NyAS2yRuPAlYuI+12XVBNyTe6w2X6AohuKdSsUAKMVsO8FOHV189fQqnJVdjnL+QnM9GHM+L1gOJo1wCOPjHPCBtWUw4ZSsJRrfePTEsuo2qfZmDNwMn9DM66ZC5rzIJ9JBQ/jLU7P/Z/b4pXnkL+RVZZ1Sksk6TkfX1ZJeQ5IuWFwgDD30/VYfigXiTYXfQcCcWIGVZEOJ3I0DEw2d1Zh67UBzXx5xd6IXeLxyKoRdaxbGH36M9DMxwDEXwZHhJsfd+ZpXAWYmh14BHPB0KWikhydTnutTLlRRkW/C3spEWRjXYAvk4pG803ruPz46EtsEbTUtn74a9FLFZnBt+YW16ku3CpZP2T5SE/HZQICf090w7aqTrMSeMv0b8gcS2hRaon1MaT0oJj4qXy/xxJeu10q4YoETcxilC/sentEPNa7ncOOo2e/8SJCYsJ56o4a0X05veQOHtyEtUZkJry5NEwZ908iTKpT9FGjf2a+QYdsbCHkWmPmUbxVKy+nMKR8o9ih8XUoCodTTPE9VtS0UT6CopDApZzh/lvaeeQL+cXh+gnjwJe7Bt2Wibol1V/zpAZ9/nDUXREb3koNMEbsEy2GFrotzeZ21bYLUW4UauH/7tU4BAQpaRx6K9sQw3yNR9NcPFMnPAss4SY45YdQJt7cwHUZ434=
+before_install:
+- wget https://github.com/jgm/pandoc/releases/download/2.1.1/pandoc-2.1.1-1-amd64.deb
+  && ar p pandoc-2.1.1-1-amd64.deb data.tar.xz | tar xJ
+- sudo apt-get update -qq
+- sudo apt-get install texlive-xetex texlive-latex-recommended texlive-latex-extra
+  texlive-fonts-recommended texlive-fonts-extra  texlive-science
+- sudo apt-get install lmodern
+
+script:
+  - make pdf
+after_success:
+  - "./push.sh"
+
+
+
+
+
