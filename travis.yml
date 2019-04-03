@@ -1,5 +1,5 @@
 # Ruby is our language as asciidoctor is a ruby gem.
-language: bash
+language: ruby  #bash
 env:
   global:
   - PATH=$TRAVIS_BUILD_DIR/usr/bin/:$PATH
@@ -21,10 +21,11 @@ install:
 
 script:
   - make pdf
+   - "bundle exec rake neo4j:install['community-2.2.0-M02'] neo4j:start default --trace"
 after_success:
   - "./push.sh"
-
-
+rvm:
+  - 2.0.0
 
 
 
