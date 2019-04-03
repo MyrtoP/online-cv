@@ -12,10 +12,13 @@ before_install:
   texlive-fonts-recommended texlive-fonts-extra  texlive-science
 - sudo apt-get install lmodern
 - gem install bundler #added
+- gem install rake
 - chmod +x push.sh
+
 #added 
 install:
 - bundle install
+
 script:
   - make pdf
 after_success:
