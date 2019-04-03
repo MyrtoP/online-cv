@@ -13,6 +13,9 @@ before_install:
 - sudo apt-get install lmodern
 - gem install bundler #added
 - chmod +x push.sh
+#added 
+install:
+- bundle install
 script:
   - make pdf
 after_success:
