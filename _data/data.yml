@@ -7,15 +7,15 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Myrto Anastasia Papapostolou
-    tagline: Undergraduate Informatics student
+    name: Mirto Anastasia Papapostolou
+    tagline: Bachelor degree of Ionian University, Faculty of Information Science & Informatics
     avatar: mypic.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below , profile.png
 
     # Sidebar links
-    email: p16papa3@ionio.gr 
+    email: mirtopam@gmail.com 
     phone: 
     website: #do not add http://
-    linkedin: Myrto Papapostolou
+    linkedin: Mirto Papapostolou
     github: MyrtoP
     gitlab:
     bitbucket:
@@ -35,24 +35,18 @@ sidebar:
         level: B1 level
 
     interests:
-      - item: Music
+      - item: Arts(Music,Films,Game Development,Web design)
         link:
 
-      - item: Drawing
-        link:
-
-      - item: Films&Movies(writing scenarios,directoring,special effects)
-        link:
-
+   
 career-profile:
     title: Career Profile
-    summary: Hello! I'm currently an undergraduate univercity student at the department of Informatics
-      at the Ionian University. Right now, I'm at my thtird year of my studies and I have experianced some projects,
-      situations and lessons. At our acaademic lessons we have seen some basic knowledges like Data Base and programming
+    summary: Hello! I'm a graduate university of the department of Informatics
+      at the Ionian University.At our acaademic lessons we have seen some basic knowledges like Data Base and programming
       with basic languages like C. I have also participated in some projects, one of them is a competition of the Udacity
       University where I had to learn XML and build a phone app. Another project, was with the schools IEEE branch, a free
       project where everybody could do what they wanted ,the title of this was 'Local Hacathon Day' where I was part of a 
-      group and we built the Matrix code. So far, that it! If you want to learn more about me scroll down! 
+      group and we built the Matrix code. Also, for my thesis I learned a new programming language React.js. So far, that it! If you want to learn more about me scroll down! 
 
 education:
     - degree: High School Graduate
@@ -68,9 +62,9 @@ education:
           - Bullet point
           - Bullet point
 
-    - degree: Undergraduate Student
+    - degree: Bachelor
       university: Ionian University
-      time: 2016 - Present
+      time: 2016 - 2020
       details: Department of informatics 
 
 experiences:
@@ -110,7 +104,10 @@ skills:
         level: 70%
 
       - name: HTML5 & CSS
-        level: 60%
+        level: 80%
+        
+      - name: React, React.js (Babylon)
+        level: 50%
         
       - name: XML,C,Python,C++
         level: 40%
@@ -118,8 +115,6 @@ skills:
       - name: Photoshop & Video editing
         level: 60%
         
-      - name: Graphics & Film-Animation Editing
-        level: 0%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by Myrto. Based on online-cv by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
